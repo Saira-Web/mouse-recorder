@@ -46,11 +46,23 @@ $startAndStop.addEventListener('click', (event) => {
 
 // Replay recording
 $replayRecording.addEventListener('click', (event) => {
-
+	
+	function record (count) {
+        if (count < (mouseMoves.length - 1)) {    // MouseMoves is an array of stored coordinates
+            setTimeout (function(){
+				$cursor.style.setProperty('--x', mouseMoves[count].x)
+				$cursor.style.setProperty('--y', mouseMoves[count].y)
+                count++;    // Behave like loop
+                record (count);    // Call recursively
+            }, duration);
+        } else {
+            // Clear mouseMoves coordinates for next click
+            mouseMoves = [];
+        }
+    }
+	record (0);    // Call function
 	
 	// Set the x and y for each mouse move recorded (123, 456 are examples)
 	// $cursor.style.setProperty('--x', 123)
 	// $cursor.style.setProperty('--y', 456)
-
-})
 

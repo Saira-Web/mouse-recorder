@@ -49,8 +49,8 @@ $startAndStop.addEventListener('click', (event) => {
 	function record (count) {
         if (count < (mouseMoves.length - 1)) {    // MouseMoves is an array of stored coordinates
             setTimeout (function(){
-				$cursor.style.setProperty('--x', mouseMoves[count].x)
-				$cursor.style.setProperty('--y', mouseMoves[count].y)
+				$cursor.style.setProperty('--x', mouseMoves[count].xValue)
+				$cursor.style.setProperty('--y', mouseMoves[count].yValue)
                 count++;    // Behave like loop
                 record (count);    // Call recursively
             }, 100);

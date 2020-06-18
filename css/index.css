@@ -1,3 +1,6 @@
+body{
+	background-color: darkgrey;
+}
 
 h1{
 	color: purple;
@@ -7,18 +10,24 @@ h1{
 
 #startAndStop{
 	color: seagreen;
-	font-size: 1.5em;
+	font-size: 2em;
 	align-items: center;
+	margin-right: 1em;
 }
 
 #replayRecording{
 	color: tomato;
-	font-size: 1.5em;
+	font-size: 2em;
 	align-items: center;
 }
+.playStopButton {
+	display: flex;
+	justify-content: center;
+	padding: 1.5em;
+}
 #cursor {
-	width: 0.75em;
-	height: 0.75em;
+	width: 1.75em;
+	height: 1.75em;
 	border-radius: 50%;
 	background-color: black;
 
@@ -28,5 +37,5 @@ h1{
 	top: calc(var(--y) * 1px);
 	left: calc(var(--x) * 1px);
 
-	/* transition: all 10ms; */
+	transition: all 10ms;
 }

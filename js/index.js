@@ -13,8 +13,8 @@ let mouseMoves = []
 let timer = 0;          // timer set to zero
 
 // DOM elements
-const $cursor = document.getElementById('cursor')
-const $startAndStop = document.getElementById('startAndStop')
+const $cursor = document.getElementById('cursor') //getting the value
+const $startAndStop = document.getElementById('startAndStop') 
 const $replayRecording = document.getElementById('replayRecording')
 
 // Each movement of the mouse
@@ -39,7 +39,7 @@ $startAndStop.addEventListener('click', (event) => {
 	isRecording = !isRecording; 
 	if (isRecording) {
 	mouseMoves = [];
-	console.log(mouseMoves);
+	// console.log(mouseMoves);
 	}
 
 })
